@@ -1,130 +1,105 @@
-
 # Open Product Problems
 
-A curated collection of real-world product challenges to sharpen your product management skills and prepare for interviews.
-
-## About this Project
-
-Open Product Problems provides a platform for product managers, aspiring PMs, and product teams to practice with authentic product scenarios. The problems span various industries, difficulty levels, and product areas to provide a comprehensive training ground for product professionals.
+A curated collection of real-world product management problems to help you practice and prepare for interviews.
 
 ## Features
 
-- Browse through a collection of product problems
-- Filter problems by difficulty and categories
-- View detailed problem descriptions and suggested approaches
-- Access community solutions
-- Submit your own solutions and problems
-- Mobile-friendly responsive design
-
-## Local Development
-
-### Prerequisites
-
-- Node.js (v16 or later)
-- npm or yarn
-
-### Setup
-
-1. Clone the repository
-```sh
-git clone https://github.com/yourusername/open-product-problems.git
-```
-
-2. Navigate to the project directory
-```sh
-cd open-product-problems
-```
-
-3. Install dependencies
-```sh
-npm install
-# or
-yarn install
-```
-
-4. Start the development server
-```sh
-npm run dev
-# or
-yarn dev
-```
-
-5. Open your browser and navigate to `http://localhost:5173/`
-
-## Deploying to GitHub Pages
-
-This application is configured to be easily deployed to GitHub Pages. Follow these steps to deploy your own instance:
-
-### 1. Create a GitHub Repository
-
-If you haven't already, create a new repository on GitHub.
-
-### 2. Configure your project
-
-1. In your project's `package.json`, add the following:
-
-```json
-{
-  "homepage": "https://yourusername.github.io/your-repo-name",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  }
-}
-```
-
-2. Install the `gh-pages` package:
-
-```sh
-npm install --save-dev gh-pages
-# or
-yarn add --dev gh-pages
-```
-
-### 3. Build and Deploy
-
-Run the following command to build and deploy your application:
-
-```sh
-npm run deploy
-# or
-yarn deploy
-```
-
-This will create a `gh-pages` branch in your repository with the built application.
-
-### 4. Configure GitHub Pages Settings
-
-1. Go to your repository on GitHub
-2. Navigate to Settings > Pages
-3. In the "Source" section, select the `gh-pages` branch
-4. Save the changes
-
-Your site should now be published at `https://yourusername.github.io/your-repo-name`
-
-### 5. Custom Domain (Optional)
-
-If you want to use a custom domain:
-
-1. In the GitHub Pages settings, enter your custom domain
-2. Create a `CNAME` file in the `public` folder of your project with your domain name
-3. Update your DNS settings with your domain provider
-
-## Notes on GitHub Pages SPA Routing
-
-This project uses the HashRouter for production builds to ensure proper routing on GitHub Pages. The 404.html file and redirect script in index.html handle client-side routing for the single-page application.
+- Real-world product management problems from various companies
+- Detailed problem descriptions with context and data
+- Suggested frameworks and approaches
+- Community solutions and discussions
+- Difficulty levels and categories for easy navigation
 
 ## Contributing
 
-We welcome contributions! If you'd like to:
+We welcome contributions from the community! You can contribute in two ways:
 
-- Submit a problem: Use the "Share a Problem" feature or open an issue
-- Submit a solution: Use the "Share a Solution" feature or open a pull request
-- Report bugs or request features: Open an issue
+### 1. Share a Product Problem
+
+To share a new product problem, create a new entry in `src/data/problemsData.ts`. Here's a template you can use:
+
+```typescript
+// Add this to the problemsData array
+{
+  id: "your-problem-id", // e.g., "spotify-discovery"
+  title: "Your Problem Title",
+  description: "A brief description of the problem",
+  difficulty: "easy" | "medium" | "hard",
+  company: "Company Name",
+  categories: ["category-1", "category-2"], // e.g., ["feature-prioritization", "user-growth"]
+  frameworks: ["Framework 1", "Framework 2"], // e.g., ["RICE", "MoSCoW"]
+  background: `Detailed background information about the problem.
+    You can include multiple paragraphs.
+    Use template literals for formatting.`,
+  keyQuestions: [
+    "Key question 1?",
+    "Key question 2?",
+    "Key question 3?"
+  ],
+  data: [
+    {
+      title: "Data Point 1",
+      content: "Description of the data point"
+    },
+    {
+      title: "Data Point 2",
+      content: "Description of the data point"
+    }
+  ],
+  resources: [
+    {
+      title: "Resource Title",
+      url: "https://resource-url.com",
+      type: "article" | "video" | "case-study"
+    }
+  ],
+  approach: `Suggested approach to solving the problem.
+    You can include multiple paragraphs.
+    Use template literals for formatting.`
+}
+
+// Add this to the problemsDetails object
+"your-problem-id": {
+  // Same content as above, plus:
+  solutions: [
+    {
+      id: "solution-1",
+      title: "Solution Title",
+      description: "Brief description of the solution",
+      author: "Author Name",
+      date: "2024-03-20",
+      url: "https://solution-url.com"
+    }
+  ]
+}
+```
+
+### 2. Share a Solution
+
+To share a solution to an existing problem, add it to the `solutions` array in the corresponding problem's details in `src/data/problemsData.ts`:
+
+```typescript
+// Add this to the solutions array of the problem
+{
+  id: "your-solution-id",
+  title: "Your Solution Title",
+  description: "A brief description of your solution approach",
+  author: "Your Name",
+  date: "2024-03-20", // Use YYYY-MM-DD format
+  url: "https://your-solution-url.com" // Link to your detailed solution
+}
+```
+
+### Submission Process
+
+1. Fork the repository
+2. Create a new branch for your contribution
+3. Add your problem or solution following the templates above
+4. Submit a pull request with a clear description of your contribution
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
