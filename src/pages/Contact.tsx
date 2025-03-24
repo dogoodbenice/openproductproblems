@@ -1,15 +1,14 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Mail } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Contact = () => {
-  const contactEmail = "name@example.com";
+  const contactEmail = 'contact@openproductproblems.com';
 
   return (
-    <div className="min-h-screen bg-background pb-20 flex flex-col">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-30">
         <div className="container py-4">
@@ -23,7 +22,6 @@ const Contact = () => {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="container py-12 flex-grow">
         <div className="max-w-md mx-auto">
           <Card>
@@ -58,23 +56,6 @@ const Contact = () => {
           </Card>
         </div>
       </main>
-      
-      {/* Footer */}
-      <footer className="py-8 border-t mt-auto">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Open Product Problems. All rights reserved.
-            </p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground">About</Link>
-              <Link to="/share-problem" className="text-sm text-muted-foreground hover:text-foreground">Contribute</Link>
-              <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground">Contact</Link>
-              <Link to="/sponsor" className="text-sm text-muted-foreground hover:text-foreground">Sponsor</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

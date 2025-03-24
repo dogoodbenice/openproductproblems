@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
@@ -160,23 +159,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Open Product Problems. All rights reserved.
-            </p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground">About</Link>
-              <Link to="/share-problem" className="text-sm text-muted-foreground hover:text-foreground">Contribute</Link>
-              <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground">Contact</Link>
-              <Link to="/sponsor" className="text-sm text-muted-foreground hover:text-foreground">Sponsor</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
