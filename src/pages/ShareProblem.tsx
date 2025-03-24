@@ -41,13 +41,13 @@ const ShareProblem = () => {
                 <h3 className="text-lg font-medium mb-4">What Makes a Good Problem?</h3>
                 <ul className="space-y-3 pl-6 list-disc">
                   <li>
-                    <span className="font-medium">Real-world relevance</span>
+                    <span className="font-medium">Real-world relevance:</span>
                     <p className="text-muted-foreground mt-1">
                       Based on actual challenges faced by product teams or inspired by real industry situations.
                     </p>
                   </li>
                   <li>
-                    <span className="font-medium">Clear context and constraints</span>
+                    <span className="font-medium">Clear context and constraints:</span>
                     <p className="text-muted-foreground mt-1">
                       Provides enough background information and constraints to make the problem solvable.
                     </p>

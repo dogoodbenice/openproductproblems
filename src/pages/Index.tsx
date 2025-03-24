@@ -10,36 +10,28 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="hero-gradient py-20 md:py-32 relative overflow-hidden">
-        <div className="container relative z-10">
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"></div>
+        <div className="relative container py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="tag mb-4 inline-block">
-              Product Management Practice
-            </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Open Product Problems
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              A curated collection of real-world product challenges to sharpen your 
-              product management skills and prepare for interviews.
+            <p className="text-xl md:text-2xl text-foreground mb-8">
+            A curated collection of product challenges to strengthen your skills.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/problems" className="button-primary">
-                Explore Problems
-                <ArrowRight className="ml-2 h-4 w-4" />
+                View Problems
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a href="#about" className="button-secondary">
+              <Link to="/about" className="button-secondary">
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
-        
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <span className="text-sm text-muted-foreground mb-2">Scroll to discover</span>
-          <ChevronDown className="w-5 h-5 text-muted-foreground animate-bounce" />
-        </div>
-      </section>
+      </div>
 
       {/* Featured Problems Section */}
       <section className="py-16 bg-gray-50">

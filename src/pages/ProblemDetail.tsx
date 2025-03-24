@@ -6,6 +6,98 @@ import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '.
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 
+const getFrameworkContext = (framework: string): string => {
+  const contexts: { [key: string]: string } = {
+    "RICE": "Prioritize features based on Reach, Impact, Confidence, and Effort",
+    "MoSCoW": "Categorize requirements into Must-have, Should-have, Could-have, and Won't-have",
+    "KPI": "Define and track Key Performance Indicators to measure success",
+    "AARRR": "Track user journey through Acquisition, Activation, Retention, Revenue, and Referral",
+    "ICE": "Score ideas based on Impact, Confidence, and Ease of implementation",
+    "OKR": "Set and track Objectives and Key Results for goal achievement",
+    "SWOT": "Analyze Strengths, Weaknesses, Opportunities, and Threats",
+    "5 Whys": "Root cause analysis through iterative questioning",
+    "User Story": "Define features from user perspective with acceptance criteria",
+    "A/B Testing": "Compare two versions to determine which performs better",
+    "Cost-Benefit": "Evaluate financial implications of decisions",
+    "ROI": "Calculate Return on Investment for initiatives",
+    "MVP": "Define Minimum Viable Product features",
+    "User Journey": "Map user interactions and touchpoints",
+    "Competitive Analysis": "Evaluate market position and competitors",
+    "Market Research": "Gather insights about target market",
+    "Data Analysis": "Analyze metrics and trends",
+    "User Research": "Study user behavior and needs",
+    "Prototyping": "Create and test product prototypes",
+    "Usability Testing": "Evaluate product usability",
+    "Feature Prioritization": "Rank features by importance",
+    "Product Strategy": "Define product direction and goals",
+    "Roadmapping": "Plan product development timeline",
+    "Stakeholder Management": "Manage relationships with key stakeholders",
+    "Risk Assessment": "Evaluate potential risks and mitigation",
+    "Resource Allocation": "Optimize resource distribution",
+    "Timeline Planning": "Schedule project milestones",
+    "Budget Planning": "Plan and track project costs",
+    "Team Collaboration": "Facilitate cross-functional teamwork",
+    "Documentation": "Maintain product documentation",
+    "Quality Assurance": "Ensure product quality",
+    "Performance Metrics": "Track product performance",
+    "Customer Feedback": "Gather and analyze user feedback",
+    "Market Validation": "Validate product-market fit",
+    "Launch Planning": "Plan product launches",
+    "Growth Strategy": "Plan product growth initiatives",
+    "Pricing Strategy": "Develop pricing models",
+    "Distribution Strategy": "Plan product distribution",
+    "Brand Strategy": "Define brand positioning",
+    "Communication Plan": "Plan stakeholder communication"
+  };
+  return contexts[framework] || "A framework for product management decision-making";
+};
+
+const getFrameworkLink = (framework: string): string => {
+  const links: { [key: string]: string } = {
+    "RICE": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
+    "MoSCoW": "https://www.productplan.com/glossary/moscow-prioritization/",
+    "KPI": "https://www.productplan.com/glossary/key-performance-indicator-kpi/",
+    "AARRR": "https://www.productplan.com/glossary/pirate-metrics-aarrr/",
+    "ICE": "https://www.productplan.com/glossary/ice-scoring/",
+    "OKR": "https://www.productplan.com/glossary/objectives-and-key-results-okr/",
+    "SWOT": "https://www.productplan.com/glossary/swot-analysis/",
+    "5 Whys": "https://www.productplan.com/glossary/five-whys/",
+    "User Story": "https://www.productplan.com/glossary/user-story/",
+    "A/B Testing": "https://www.productplan.com/glossary/ab-testing/",
+    "Cost-Benefit": "https://www.productplan.com/glossary/cost-benefit-analysis/",
+    "ROI": "https://www.productplan.com/glossary/return-on-investment-roi/",
+    "MVP": "https://www.productplan.com/glossary/minimum-viable-product-mvp/",
+    "User Journey": "https://www.productplan.com/glossary/user-journey-map/",
+    "Competitive Analysis": "https://www.productplan.com/glossary/competitive-analysis/",
+    "Market Research": "https://www.productplan.com/glossary/market-research/",
+    "Data Analysis": "https://www.productplan.com/glossary/data-analysis/",
+    "User Research": "https://www.productplan.com/glossary/user-research/",
+    "Prototyping": "https://www.productplan.com/glossary/prototype/",
+    "Usability Testing": "https://www.productplan.com/glossary/usability-testing/",
+    "Feature Prioritization": "https://www.productplan.com/glossary/feature-prioritization/",
+    "Product Strategy": "https://www.productplan.com/glossary/product-strategy/",
+    "Roadmapping": "https://www.productplan.com/glossary/product-roadmap/",
+    "Stakeholder Management": "https://www.productplan.com/glossary/stakeholder-management/",
+    "Risk Assessment": "https://www.productplan.com/glossary/risk-assessment/",
+    "Resource Allocation": "https://www.productplan.com/glossary/resource-allocation/",
+    "Timeline Planning": "https://www.productplan.com/glossary/timeline/",
+    "Budget Planning": "https://www.productplan.com/glossary/budget-planning/",
+    "Team Collaboration": "https://www.productplan.com/glossary/team-collaboration/",
+    "Documentation": "https://www.productplan.com/glossary/product-documentation/",
+    "Quality Assurance": "https://www.productplan.com/glossary/quality-assurance/",
+    "Performance Metrics": "https://www.productplan.com/glossary/performance-metrics/",
+    "Customer Feedback": "https://www.productplan.com/glossary/customer-feedback/",
+    "Market Validation": "https://www.productplan.com/glossary/market-validation/",
+    "Launch Planning": "https://www.productplan.com/glossary/product-launch/",
+    "Growth Strategy": "https://www.productplan.com/glossary/growth-strategy/",
+    "Pricing Strategy": "https://www.productplan.com/glossary/pricing-strategy/",
+    "Distribution Strategy": "https://www.productplan.com/glossary/distribution-strategy/",
+    "Brand Strategy": "https://www.productplan.com/glossary/brand-strategy/",
+    "Communication Plan": "https://www.productplan.com/glossary/communication-plan/"
+  };
+  return links[framework] || "https://www.productplan.com/glossary/";
+};
+
 const ProblemDetail = () => {
   const { id } = useParams<{ id: string }>();
   
@@ -209,12 +301,51 @@ const ProblemDetail = () => {
         
         {/* Suggested Frameworks */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Suggested Frameworks</h2>
-          <div className="flex flex-wrap gap-2">
-            {problem.frameworks.map((framework, index) => (
-              <span key={index} className="tag">{framework}</span>
-            ))}
-          </div>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center">
+                <FileText className="h-5 w-5 mr-2 text-primary" />
+                Suggested Frameworks
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Framework</TableHead>
+                    <TableHead>Context</TableHead>
+                    <TableHead className="text-right">Learn More</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {problem.frameworks.map((framework) => (
+                    <TableRow key={framework} className="hover:bg-muted/60">
+                      <TableCell className="py-4">
+                        <div className="font-medium">{framework}</div>
+                      </TableCell>
+                      <TableCell>
+                        <div className="text-sm text-muted-foreground">
+                          {getFrameworkContext(framework)}
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <a
+                          href={getFrameworkLink(framework)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="outline" size="sm">
+                            View
+                            <ExternalLink className="ml-1 h-3 w-3" />
+                          </Button>
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
         </section>
         
         {/* Suggested Approach */}
