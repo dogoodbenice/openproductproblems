@@ -4,7 +4,7 @@ A curated collection of real-world product management problems to help you pract
 
 ## Features
 
-- Real-world product management problems from various companies
+- Real-world product management problems that are abstracted from various companies and domains
 - Detailed problem descriptions with context and data
 - Suggested frameworks and approaches
 - Community solutions and discussions
