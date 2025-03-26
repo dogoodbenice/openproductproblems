@@ -116,19 +116,19 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "Streaming Wars: A Market Analysis",
-        url: "#",
-        type: "article"
-      },
-      {
-        title: "Consumer Behavior in Digital Entertainment",
-        url: "#",
+        title: "Streaming Market Analysis 2024",
+        url: "https://www.statista.com/statistics/420621/most-popular-video-streaming-services-worldwide/",
         type: "research"
       },
       {
-        title: "Pricing Strategies for Subscription Models",
-        url: "#",
-        type: "guide"
+        title: "Digital Entertainment Consumer Trends",
+        url: "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-future-of-digital-entertainment",
+        type: "research"
+      },
+      {
+        title: "Subscription Business Models",
+        url: "https://www.bain.com/insights/subscription-business-models-are-booming/",
+        type: "article"
       }
     ],
     frameworks: [
@@ -208,19 +208,19 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "Value vs. Effort Prioritization",
-        url: "#",
-        type: "framework"
+        title: "Fintech Product Development Guide",
+        url: "https://www.mckinsey.com/industries/financial-services/our-insights/fintech-product-development",
+        type: "guide"
       },
       {
-        title: "RICE Scoring Model",
-        url: "#",
-        type: "framework"
+        title: "Mobile Banking Feature Trends",
+        url: "https://www.forrester.com/blogs/10-mobile-banking-features-that-will-transform-customer-experience/",
+        type: "research"
       },
       {
-        title: "Kano Model for Feature Evaluation",
-        url: "#",
-        type: "framework"
+        title: "Fintech User Behavior Study",
+        url: "https://www.jpmorgan.com/insights/payments/fintech-trends",
+        type: "research"
       }
     ],
     frameworks: [
@@ -293,19 +293,19 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "E-commerce Funnel Optimization Guide",
-        url: "#",
+        title: "E-commerce Conversion Optimization",
+        url: "https://www.shopify.com/blog/ecommerce-conversion-rate-optimization",
         type: "guide"
       },
       {
-        title: "User Psychology in Online Shopping",
-        url: "#",
+        title: "Digital Shopping Behavior Report",
+        url: "https://www.nielsen.com/insights/2023/digital-shopping-behavior/",
         type: "research"
       },
       {
-        title: "Competitive Analysis Frameworks",
-        url: "#",
-        type: "framework"
+        title: "E-commerce Analytics Best Practices",
+        url: "https://www.thinkwithgoogle.com/marketing-strategies/ecommerce/analytics/",
+        type: "article"
       }
     ],
     frameworks: [
@@ -387,18 +387,18 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "B2B User Research Methodologies",
-        url: "#",
+        title: "B2B SaaS Research Methods",
+        url: "https://www.productplan.com/blog/b2b-saas-user-research/",
         type: "guide"
       },
       {
-        title: "Jobs-to-be-Done Framework",
-        url: "#",
-        type: "framework"
+        title: "Enterprise Software Adoption Study",
+        url: "https://www.gartner.com/en/documents/3991664",
+        type: "research"
       },
       {
-        title: "User Research to Product Requirements",
-        url: "#",
+        title: "SaaS Product Validation Framework",
+        url: "https://www.intercom.com/blog/product-validation/",
         type: "article"
       }
     ],
@@ -472,18 +472,18 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "Hardware Product Launch Playbook",
-        url: "#",
-        type: "guide"
-      },
-      {
-        title: "Smart Home Market Analysis",
-        url: "#",
+        title: "Smart Home Market Report 2024",
+        url: "https://www.grandviewresearch.com/industry-analysis/smart-home-market",
         type: "research"
       },
       {
-        title: "Consumer Technology Pricing Strategies",
-        url: "#",
+        title: "Hardware Product Launch Guide",
+        url: "https://www.hardwareclub.vc/hardware-product-launch-guide",
+        type: "guide"
+      },
+      {
+        title: "Consumer Tech Marketing Strategies",
+        url: "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/consumer-tech-marketing",
         type: "article"
       }
     ],
@@ -559,18 +559,18 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "Agile Roadmapping Techniques",
-        url: "#",
+        title: "Social Platform Growth Strategies",
+        url: "https://www.sequoiacap.com/article/social-platform-growth/",
         type: "guide"
       },
       {
-        title: "Product Prioritization Frameworks",
-        url: "#",
-        type: "framework"
+        title: "Social Media User Behavior",
+        url: "https://www.pewresearch.org/internet/topic/social-media/",
+        type: "research"
       },
       {
-        title: "Balancing Growth and Monetization",
-        url: "#",
+        title: "Platform Monetization Models",
+        url: "https://a16z.com/platform-monetization/",
         type: "article"
       }
     ],
@@ -655,18 +655,18 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "User Feedback Analysis Techniques",
-        url: "#",
+        title: "Mobile App Feedback Analysis",
+        url: "https://www.appsflyer.com/blog/mobile-app-feedback-analysis/",
         type: "guide"
       },
       {
-        title: "Sentiment Analysis in Product Management",
-        url: "#",
-        type: "framework"
+        title: "App Store Review Analysis",
+        url: "https://www.sensortower.com/blog/app-store-review-analysis",
+        type: "research"
       },
       {
-        title: "From Feedback to Features",
-        url: "#",
+        title: "User Feedback to Product Decisions",
+        url: "https://www.productboard.com/blog/from-user-feedback-to-product-decisions/",
         type: "article"
       }
     ],
@@ -738,18 +738,18 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "SaaS Feature Launch Playbook",
-        url: "#",
+        title: "SaaS Feature Launch Guide",
+        url: "https://www.productplan.com/blog/saas-feature-launch/",
         type: "guide"
       },
       {
-        title: "Product Adoption Curves in B2B",
-        url: "#",
+        title: "B2B Product Adoption Study",
+        url: "https://www.gartner.com/en/documents/3991664",
         type: "research"
       },
       {
-        title: "In-app Messaging Best Practices",
-        url: "#",
+        title: "Feature Rollout Best Practices",
+        url: "https://www.intercom.com/blog/feature-rollout/",
         type: "article"
       }
     ],
@@ -821,18 +821,18 @@ export const problemsDetails = {
     ],
     resources: [
       {
-        title: "Digital Health Competitive Analysis",
-        url: "#",
-        type: "framework"
+        title: "Digital Health Market Analysis",
+        url: "https://www.frost.com/research/healthcare/digital-health/",
+        type: "research"
       },
       {
-        title: "Healthcare Product Positioning",
-        url: "#",
+        title: "Healthcare Product Development",
+        url: "https://www.rockhealth.com/insights/healthcare-product-development",
         type: "guide"
       },
       {
-        title: "Regulatory Considerations in HealthTech",
-        url: "#",
+        title: "HealthTech Regulatory Guide",
+        url: "https://www.fda.gov/medical-devices/digital-health-center-excellence",
         type: "article"
       }
     ],

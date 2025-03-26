@@ -150,7 +150,7 @@ const Problems = () => {
                       <button
                         key={difficulty}
                         onClick={() => toggleDifficulty(difficulty)}
-                        className={`tag ${selectedDifficulties.includes(difficulty) ? 'bg-primary text-primary-foreground' : ''}`}
+                        className={`tag ${selectedDifficulties.includes(difficulty) ? getDifficultyColor(difficulty) : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
                       >
                         {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
                       </button>
@@ -176,11 +176,11 @@ const Problems = () => {
                 ))}
                 
                 {selectedDifficulties.map(difficulty => (
-                  <div key={difficulty} className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                  <div key={difficulty} className={`inline-flex items-center rounded-full ${getDifficultyColor(difficulty)} px-2.5 py-0.5 text-xs font-medium`}>
                     {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
                     <button 
                       onClick={() => toggleDifficulty(difficulty)}
-                      className="ml-1 h-3.5 w-3.5 rounded-full hover:bg-primary/20"
+                      className="ml-1 h-3.5 w-3.5 rounded-full hover:bg-black/10"
                     >
                       <X className="h-3 w-3" />
                     </button>

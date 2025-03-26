@@ -303,11 +303,19 @@ const ProblemDetail = () => {
                             {solution.description}
                           </div>
                           <div className="text-xs text-muted-foreground mt-1">
-                            {new Date(solution.date).toLocaleDateString('en-US', {
-                              year: 'numeric',
-                              month: 'short',
-                              day: 'numeric'
-                            })}
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <User className="h-4 w-4" />
+                              <a 
+                                href={solution.author_url || 'https://example.com'} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="hover:text-primary hover:underline"
+                              >
+                                {solution.author}
+                              </a>
+                              <span>•</span>
+                              <span>{new Date(solution.date).toLocaleDateString()}</span>
+                            </div>
                           </div>
                         </TableCell>
                         <TableCell>

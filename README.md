@@ -67,6 +67,7 @@ To share a new product problem, create a new entry in `src/data/problemsData.ts`
       title: "Solution Title",
       description: "Brief description of the solution",
       author: "Author Name",
+      author_url: "https://example.com/author-profile",
       date: "2024-03-20",
       url: "https://solution-url.com"
     }
