@@ -75,6 +75,38 @@ export const problemsData = [
     categories: ["strategy", "market-analysis"],
     difficulty: "medium",
     company: "HealthTech Startup"
+  },
+  {
+    id: "onboarding-optimization-saas",
+    title: "Onboarding Flow Optimization for SaaS Platform",
+    description: "Optimize the user onboarding experience for a B2B SaaS platform to improve activation rates.",
+    categories: ["user-experience", "analytics"],
+    difficulty: "easy",
+    company: "B2B SaaS Co."
+  },
+  {
+    id: "pricing-strategy-marketplace",
+    title: "Pricing Strategy for Two-Sided Marketplace",
+    description: "Develop a pricing strategy for a new two-sided marketplace platform connecting service providers with customers.",
+    categories: ["strategy", "pricing"],
+    difficulty: "medium",
+    company: "Marketplace Inc."
+  },
+  {
+    id: "localization-strategy-mobile",
+    title: "App Localization Strategy for Global Expansion",
+    description: "Create a comprehensive localization strategy for a mobile app expanding into 10 new markets.",
+    categories: ["strategy", "internationalization"],
+    difficulty: "hard",
+    company: "Global App Co."
+  },
+  {
+    id: "feature-discovery-mobile",
+    title: "Feature Discovery for Mobile App",
+    description: "Design a feature discovery system to help users find and understand new app features.",
+    categories: ["user-experience", "product-development"],
+    difficulty: "easy",
+    company: "Mobile App Co."
   }
 ];
 
@@ -867,6 +899,262 @@ export const problemsDetails = {
         url: "https://example.com/solution21",
       }
     ]
+  },
+  "onboarding-optimization-saas": {
+    title: "Onboarding Flow Optimization for SaaS Platform",
+    company: "B2B SaaS Co.",
+    difficulty: "easy",
+    categories: ["user-experience", "analytics"],
+    background: `
+      A B2B SaaS company has noticed that only 40% of new users complete their onboarding process and become active users. The current onboarding flow consists of a 5-step process that includes account setup, team invitation, and feature tutorials.
+      
+      The product team needs to optimize this flow to improve activation rates while maintaining a smooth user experience.
+    `,
+    keyQuestions: [
+      "Which steps in the onboarding process have the highest drop-off rates?",
+      "How can we reduce friction in the onboarding flow?",
+      "What metrics should we track to measure onboarding success?",
+      "How can we personalize the onboarding experience for different user roles?"
+    ],
+    data: [
+      {
+        title: "Onboarding Analytics",
+        content: "Step-by-step completion rates and time spent on each onboarding step for the past 3 months."
+      },
+      {
+        title: "User Feedback",
+        content: "Survey responses from 500 users who either completed or abandoned the onboarding process."
+      },
+      {
+        title: "User Segments",
+        content: "Breakdown of users by company size, industry, and role within their organization."
+      },
+      {
+        title: "Feature Usage",
+        content: "Correlation between completed onboarding steps and subsequent feature adoption rates."
+      }
+    ],
+    resources: [
+      {
+        title: "SaaS Onboarding Best Practices",
+        url: "https://www.productplan.com/blog/saas-onboarding-best-practices/",
+        type: "article"
+      },
+      {
+        title: "User Activation Metrics Guide",
+        url: "https://www.intercom.com/blog/user-activation-metrics/",
+        type: "guide"
+      },
+      {
+        title: "Onboarding UX Research",
+        url: "https://www.nngroup.com/articles/onboarding-ux/",
+        type: "research"
+      }
+    ],
+    frameworks: [
+      "User Journey Mapping",
+      "AARRR Metrics",
+      "Usability Testing",
+      "Data Analysis"
+    ],
+    approach: `
+      Begin by analyzing the current onboarding analytics to identify specific drop-off points. Review user feedback to understand pain points and areas of confusion. Map the user journey for different user segments to identify opportunities for personalization.
+      
+      Design and implement A/B tests for different onboarding flows, focusing on reducing friction and improving clarity. Establish clear success metrics and monitor the impact of changes on activation rates.
+    `,
+    solutions: []
+  },
+  "pricing-strategy-marketplace": {
+    title: "Pricing Strategy for Two-Sided Marketplace",
+    company: "Marketplace Inc.",
+    difficulty: "medium",
+    categories: ["strategy", "pricing"],
+    background: `
+      A new marketplace platform connecting service providers with customers needs to establish a sustainable pricing model. The platform needs to balance attracting both sides of the market while ensuring profitability.
+      
+      The team needs to develop a pricing strategy that encourages early adoption while setting up for long-term growth.
+    `,
+    keyQuestions: [
+      "How should we structure fees for different types of transactions?",
+      "What incentives can we offer to early adopters on both sides?",
+      "How can we ensure the pricing model scales with platform growth?",
+      "What metrics should we track to evaluate pricing effectiveness?"
+    ],
+    data: [
+      {
+        title: "Market Research",
+        content: "Analysis of competitor pricing models and market willingness to pay for similar services."
+      },
+      {
+        title: "User Segments",
+        content: "Breakdown of service providers by size and customers by spending patterns."
+      },
+      {
+        title: "Cost Structure",
+        content: "Platform operating costs and projected scaling costs for different transaction volumes."
+      },
+      {
+        title: "Growth Projections",
+        content: "Market size estimates and growth forecasts for the next 3 years."
+      }
+    ],
+    resources: [
+      {
+        title: "Marketplace Pricing Strategies",
+        url: "https://www.a16z.com/2016/08/20/16-metrics/",
+        type: "article"
+      },
+      {
+        title: "Two-Sided Market Economics",
+        url: "https://www.strategy-business.com/article/Two-Sided-Markets",
+        type: "research"
+      },
+      {
+        title: "Platform Business Models",
+        url: "https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/platform-business-models",
+        type: "article"
+      }
+    ],
+    frameworks: [
+      "Value-Based Pricing",
+      "Market Research",
+      "Cost-Benefit Analysis",
+      "Competitive Analysis"
+    ],
+    approach: `
+      Start by analyzing the market landscape and competitor pricing models. Identify key value drivers for both sides of the marketplace. Develop different pricing scenarios and model their impact on growth and profitability.
+      
+      Consider implementing a phased pricing strategy that starts with lower fees to encourage adoption and gradually adjusts based on market feedback and growth metrics.
+    `,
+    solutions: []
+  },
+  "localization-strategy-mobile": {
+    title: "App Localization Strategy for Global Expansion",
+    company: "Global App Co.",
+    difficulty: "hard",
+    categories: ["strategy", "internationalization"],
+    background: `
+      A successful mobile app with 5M users in its home market is planning to expand into 10 new markets across different continents. The app needs to be localized while maintaining its core functionality and user experience.
+      
+      The product team needs to develop a comprehensive localization strategy that considers cultural differences, technical requirements, and market-specific needs.
+    `,
+    keyQuestions: [
+      "How should we prioritize which markets to enter first?",
+      "What aspects of the app need to be localized vs. kept global?",
+      "How can we ensure consistent user experience across different markets?",
+      "What metrics should we track to measure localization success?"
+    ],
+    data: [
+      {
+        title: "Market Analysis",
+        content: "Market size, growth potential, and competitive landscape for each target market."
+      },
+      {
+        title: "User Research",
+        content: "Cultural preferences, language requirements, and usage patterns in target markets."
+      },
+      {
+        title: "Technical Requirements",
+        content: "Platform-specific requirements, data privacy regulations, and infrastructure needs."
+      },
+      {
+        title: "Resource Constraints",
+        content: "Available budget, team capacity, and timeline for localization efforts."
+      }
+    ],
+    resources: [
+      {
+        title: "Global App Localization Guide",
+        url: "https://www.appannie.com/insights/market-data/app-localization-guide/",
+        type: "guide"
+      },
+      {
+        title: "International UX Best Practices",
+        url: "https://www.nngroup.com/articles/international-usability/",
+        type: "research"
+      },
+      {
+        title: "Global Market Entry Strategies",
+        url: "https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/global-market-entry-strategies",
+        type: "article"
+      }
+    ],
+    frameworks: [
+      "Market Research",
+      "User Research",
+      "Risk Assessment",
+      "Resource Allocation"
+    ],
+    approach: `
+      Begin by conducting thorough market research to prioritize target markets based on potential and complexity. Develop a detailed localization plan that covers language, cultural adaptation, and technical requirements.
+      
+      Create a phased rollout strategy that allows for learning and iteration. Establish clear success metrics and feedback loops to measure the effectiveness of localization efforts.
+    `,
+    solutions: []
+  },
+  "feature-discovery-mobile": {
+    title: "Feature Discovery for Mobile App",
+    company: "Mobile App Co.",
+    difficulty: "easy",
+    categories: ["user-experience", "product-development"],
+    background: `
+      A mobile app with 1M+ users has recently launched several new features, but user adoption has been lower than expected. The product team needs to improve feature discovery and help users understand the value of these new capabilities.
+      
+      The challenge is to design an effective feature discovery system that doesn't overwhelm users or disrupt their existing workflow.
+    `,
+    keyQuestions: [
+      "How can we introduce new features without disrupting the user experience?",
+      "What's the best timing and frequency for feature announcements?",
+      "How can we personalize feature discovery for different user segments?",
+      "What metrics should we track to measure feature discovery success?"
+    ],
+    data: [
+      {
+        title: "Feature Usage",
+        content: "Current adoption rates and usage patterns for existing features."
+      },
+      {
+        title: "User Behavior",
+        content: "Analysis of how users navigate through the app and discover features."
+      },
+      {
+        title: "User Feedback",
+        content: "Survey responses about feature awareness and discovery preferences."
+      },
+      {
+        title: "App Analytics",
+        content: "Session data showing where users spend time and common navigation paths."
+      }
+    ],
+    resources: [
+      {
+        title: "Mobile App Feature Discovery",
+        url: "https://www.appcues.com/blog/feature-discovery",
+        type: "article"
+      },
+      {
+        title: "User Onboarding Best Practices",
+        url: "https://www.intercom.com/blog/user-onboarding/",
+        type: "guide"
+      },
+      {
+        title: "Mobile UX Patterns",
+        url: "https://www.nngroup.com/articles/mobile-ux-patterns/",
+        type: "research"
+      }
+    ],
+    frameworks: [
+      "User Journey Mapping",
+      "Usability Testing",
+      "A/B Testing",
+      "Data Analysis"
+    ],
+    approach: `
+      Start by analyzing current feature discovery patterns and user behavior. Design a multi-channel feature discovery system that includes in-app tooltips, contextual hints, and personalized recommendations.
+      
+      Implement a phased rollout of discovery mechanisms and measure their impact on feature adoption. Use A/B testing to optimize the timing and presentation of feature announcements.
+    `,
+    solutions: []
   }
 };
 

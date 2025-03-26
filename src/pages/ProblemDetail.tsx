@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ChevronLeft, ChevronRight, BookOpen, Database, Link as LinkIcon, ExternalLink, MessageSquare, User, FileText, PlusCircle } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, BookOpen, Database, Link as LinkIcon, ExternalLink, MessageSquare, User, FileText, PlusCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { problemsData, problemsDetails, getDifficultyColor } from '../data/problemsData';
 import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '../components/ui/table';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
@@ -142,6 +142,7 @@ const getFrameworkLink = (framework: string): string => {
 
 const ProblemDetail = () => {
   const { id } = useParams<{ id: string }>();
+  const [isApproachExpanded, setIsApproachExpanded] = useState(false);
   
   if (!id || !problemsDetails[id as keyof typeof problemsDetails]) {
     return (
@@ -303,25 +304,20 @@ const ProblemDetail = () => {
                             {solution.description}
                           </div>
                           <div className="text-xs text-muted-foreground mt-1">
-                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                              <User className="h-4 w-4" />
-                              <a 
-                                href={solution.author_url || 'https://example.com'} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="hover:text-primary hover:underline"
-                              >
-                                {solution.author}
-                              </a>
-                              <span>•</span>
-                              <span>{new Date(solution.date).toLocaleDateString()}</span>
-                            </div>
+                            <span>{new Date(solution.date).toLocaleDateString()}</span>
                           </div>
                         </TableCell>
                         <TableCell>
                           <div className="flex items-center">
                             <User className="h-4 w-4 mr-1.5 text-muted-foreground" />
-                            <span>{solution.author}</span>
+                            <a 
+                              href={solution.author_url || 'https://example.com'} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="hover:text-primary hover:underline"
+                            >
+                              {solution.author}
+                            </a>
                           </div>
                         </TableCell>
                         <TableCell className="text-right">
@@ -400,8 +396,26 @@ const ProblemDetail = () => {
         
         {/* Suggested Approach */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Suggested Approach</h2>
-          <div className="glass-card rounded-xl p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold">Suggested Approach</h2>
+            <button
+              onClick={() => setIsApproachExpanded(!isApproachExpanded)}
+              className="button-secondary flex items-center gap-2"
+            >
+              {isApproachExpanded ? (
+                <>
+                  Hide Approach
+                  <ChevronUp className="h-4 w-4" />
+                </>
+              ) : (
+                <>
+                  Reveal Approach
+                  <ChevronDown className="h-4 w-4" />
+                </>
+              )}
+            </button>
+          </div>
+          <div className={`glass-card rounded-xl p-6 transition-all duration-300 ease-in-out ${isApproachExpanded ? 'opacity-100 max-h-[2000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
             <p className="whitespace-pre-line">{problem.approach}</p>
           </div>
         </section>
