@@ -59,7 +59,7 @@ const Footer = () => {
         
         <div className="mt-4 text-center">
           <p className="text-xs text-muted-foreground">
-            Stuck on a problem? Remember: The best products solve real customer problems ❤️
+            The best products solve real customer problems in the most valuable and viable way ❤️
           </p>
         </div>
       </div>
