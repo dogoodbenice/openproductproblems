@@ -1,10 +1,10 @@
 # Open Product Problems
 
-A curated collection of real-world product management problems to help you practice and prepare for interviews.
+A curated collection of product management problems to help you practice skills, trial frameworks and prepare for interviews. It's ok to fail here. 
 
 ## Features
 
-- Real-world product management problems that are abstracted from various companies and domains
+- Product management problems that are abstracted from various real world companies and domains
 - Detailed problem descriptions with context and data
 - Suggested frameworks and approaches
 - Community solutions and discussions
