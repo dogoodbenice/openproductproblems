@@ -86,8 +86,10 @@ To share a solution to an existing problem, add it to the `solutions` array in t
   title: "Your Solution Title",
   description: "A brief description of your solution approach",
   author: "Your Name",
+  author_url: "https://your-profile-url.com", // Optional: Link to your profile
   date: "2024-03-20", // Use YYYY-MM-DD format
-  url: "https://your-solution-url.com" // Link to your detailed solution
+  url: "https://your-solution-url.com", // Link to your detailed solution
+  votes: 0 // Initial vote count
 }
 ```
 
