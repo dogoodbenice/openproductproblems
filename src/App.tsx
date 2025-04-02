@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +12,7 @@ import Contact from "./pages/Contact";
 import Sponsor from "./pages/Sponsor";
 import ShareSolution from "./pages/ShareSolution";
 import ShareProblem from "./pages/ShareProblem";
+import Surprise from "./pages/Surprise";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +36,7 @@ const App = () => (
             <Route path="/sponsor" element={<Sponsor />} />
             <Route path="/share-solution" element={<ShareSolution />} />
             <Route path="/share-problem" element={<ShareProblem />} />
+            <Route path="/surprise" element={<Surprise />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -21,7 +21,7 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-foreground mb-8">
             A curated collection of product problems to strengthen your skills. 
             </p>
-            <p>It's ok to fail here.</p>
+            <span className="tag mb-4">It's ok to fail here</span>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" asChild>
                 <Link to="/problems">
@@ -104,8 +104,7 @@ const Index = () => {
               Enhance Your Product Thinking
             </h2>
             <p className="text-muted-foreground">
-              Deliberate practice with real-world scenarios is the most effective way to develop 
-              your product management skills and prepare for interviews.
+              Deliberate practice is one of the most effective ways to develop your product management skills. Use these problems to prepare for interviews, develop methods with your team and or just to flex!
             </p>
           </div>
           
