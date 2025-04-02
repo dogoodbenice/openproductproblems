@@ -19,9 +19,9 @@ const Index = () => {
               Open Product Problems
             </h1>
             <p className="text-xl md:text-2xl text-foreground mb-8">
-            A curated collection of product problems to strengthen your skills. 
+              A curated collection of product problems to strengthen your skills. 
             </p>
-            <span className="tag mb-4">It's ok to fail here</span>
+            <span className="tag mb-6">It's ok to fail here ❤️</span>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" asChild>
                 <Link to="/problems">
@@ -45,10 +45,10 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <span className="tag mb-4">Featured Problems</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Explore Our Challenges
+              Explore The Problems 
             </h2>
             <p className="text-muted-foreground">
-              Try these product management challenges to test your skills and prepare for interviews.
+              Try out any of these product problems to test your skills, think about approaches and get feedback.
             </p>
           </div>
           
