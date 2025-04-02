@@ -82,13 +82,13 @@ const Problems = () => {
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-4">Browse Problems</h1>
               <p className="text-muted-foreground">
-                Explore our collection of product management problems to practice your skills.
+                Explore the problems to practice your skills, pick one, get started and share it with us, it's ok to fail here.
               </p>
             </div>
             <Button asChild>
               <Link to="/share-problem">
                 <PlusCircle className="mr-2 h-4 w-4" />
-                Share an Open Problem
+                Submit a problem to be featured
               </Link>
             </Button>
           </div>

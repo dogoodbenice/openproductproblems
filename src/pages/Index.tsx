@@ -101,7 +101,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="tag mb-4">Why Practice Matters</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Enhance Your Product Thinking
+              Enhance Your Product Thinking With Practice
             </h2>
             <p className="text-muted-foreground">
               Deliberate practice is one of the most effective ways to develop your product management skills. Use these problems to prepare for interviews, develop methods with your team and or just to flex!
@@ -111,16 +111,16 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Real-World Cases",
-                description: "Practice with authentic problems faced by product managers at leading companies."
+                title: "Real-World Scenarios",
+                description: "Practice with authentic problems faced by product teams at leading companies."
               },
               {
                 title: "Structured Approach",
-                description: "Each problem includes context, data, constraints, and suggested frameworks."
+                description: "Each problem includes context, data, constraints, and suggested frameworks. Make it your own by using whatever you want."
               },
               {
                 title: "Diverse Challenges",
-                description: "From feature prioritization to market entry, cover the full spectrum of PM skills."
+                description: "From feature prioritization to market entry, cover the full spectrum of PM skills and suggest your own solutions."
               }
             ].map((feature, index) => (
               <div key={index} className="glass-card rounded-xl p-6 hover-lift">
@@ -140,7 +140,7 @@ const Index = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to challenge yourself?
+              Ready to try?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Explore our collection of product problems and start improving your skills today.

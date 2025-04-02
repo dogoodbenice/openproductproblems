@@ -14,7 +14,7 @@ const Footer = () => {
               © {currentYear} Open Product Problems. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              Building better product thinkers, one problem at a time ✨
+              Helping others build better products, one problem at a time ✨
             </p>
           </div>
           

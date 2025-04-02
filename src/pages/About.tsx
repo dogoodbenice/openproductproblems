@@ -28,7 +28,7 @@ const About = () => {
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
             <div className="glass-card rounded-xl p-6">
               <p className="mb-4">
-                Open Product Problems is a platform designed to help product managers, aspiring PMs, and product teams sharpen their skills through real-world product challenges. We believe that deliberate practice with authentic scenarios is the most effective way to develop product thinking and prepare for interviews.
+                Provide a structured set of problems to help anyone develop product skills. through real-world product challenges. We believe that deliberate practice with authentic scenarios is the most effective way to develop product thinking and prepare for interviews.
               </p>
               <p>
                 Our curated collection of problems spans various industries, difficulty levels, and product areas to provide a comprehensive training ground for product professionals at all stages of their careers.
@@ -65,17 +65,10 @@ const About = () => {
             <h2 className="text-2xl font-bold mb-4">About the Creator</h2>
             <div className="glass-card rounded-xl p-6">
               <p className="mb-4">
-                Open Product Problems was created by Suraj Rai, a product leader passionate about helping others develop their product skills and thinking.
+                Open Product Problems was created by <a href="https://www.surajr.com/">Suraj</a>, a product person interested in helping others. 
               </p>
-              <a 
-                href="https://www.surajr.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:underline"
-              >
-                Visit Suraj's Website
-                <ExternalLink className="ml-1 h-4 w-4" />
-              </a>
+              <p>He's always open to <a href="https://www.linkedin.com/in/surajrai/">connect</a> and <a href="https://www.surajr.com/contact">chat</a> about product, life and everything in between.</p>
+              <p>If you've found this useful please consider buying him a <a href="https://www.buymeacoffee.com/surajrai">coffee here</a>, or getting in touch about <a href="/sponsor">sponsorship</a>.</p>
             </div>
           </section>
 
