@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { problemsData, getDifficultyColor } from '../data/problemsData';
 
 const featuredProblems = problemsData.slice(0, 6);
@@ -18,16 +19,21 @@ const Index = () => {
               Open Product Problems
             </h1>
             <p className="text-xl md:text-2xl text-foreground mb-8">
-            A curated collection of product challenges to strengthen your skills.
+            A curated collection of product problems to strengthen your skills. 
             </p>
+            <p>It's ok to fail here.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/problems" className="button-primary">
-                View Problems
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link to="/about" className="button-secondary">
-                Learn More
-              </Link>
+              <Button variant="default" asChild>
+                <Link to="/problems">
+                  View Problems
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="secondary" asChild>
+                <Link to="/about">
+                  Learn More
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -79,10 +85,12 @@ const Index = () => {
           </div>
           
           <div className="text-center">
-            <Link to="/problems" className="button-primary">
-              View All Problems
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <Button asChild>
+              <Link to="/problems">
+                View All Problems
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -139,14 +147,18 @@ const Index = () => {
               Explore our collection of product problems and start improving your skills today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/problems" className="button-primary">
-                Browse All Problems
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link to="/share-problem" className="button-secondary">
-                Share an Open Problem
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <Button asChild>
+                <Link to="/problems">
+                  Browse All Problems
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button variant="secondary" asChild>
+                <Link to="/share-problem">
+                  Share an Open Problem
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

@@ -397,10 +397,15 @@ const ProblemDetail = () => {
         {/* Suggested Approach */}
         <section className="mb-12">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold">Suggested Approach</h2>
-            <button
+            <div className="flex items-center gap-2">
+              <h2 className="text-2xl font-bold">Suggested Approach</h2>
+              <span className="text-sm text-muted-foreground">(Click to reveal)</span>
+            </div>
+            <Button
               onClick={() => setIsApproachExpanded(!isApproachExpanded)}
-              className="button-secondary flex items-center gap-2"
+              variant="secondary"
+              size="lg"
+              className="flex items-center gap-2"
             >
               {isApproachExpanded ? (
                 <>
@@ -409,11 +414,11 @@ const ProblemDetail = () => {
                 </>
               ) : (
                 <>
-                  Reveal Approach
+                  Reveal Suggested Approach
                   <ChevronDown className="h-4 w-4" />
                 </>
               )}
-            </button>
+            </Button>
           </div>
           <div className={`glass-card rounded-xl p-6 transition-all duration-300 ease-in-out ${isApproachExpanded ? 'opacity-100 max-h-[2000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
             <p className="whitespace-pre-line">{problem.approach}</p>

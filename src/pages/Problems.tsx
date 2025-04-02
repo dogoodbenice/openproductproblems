@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Filter, X, PlusCircle } from 'lucide-react';
 import { problemsData, allCategories, allDifficulties, getDifficultyColor } from '../data/problemsData';
+import { Button } from "@/components/ui/button";
 
 const Problems = () => {
   const [problems, setProblems] = useState(problemsData);
@@ -84,10 +85,12 @@ const Problems = () => {
                 Explore our collection of product management problems to practice your skills.
               </p>
             </div>
-            <Link to="/share-problem" className="button-primary whitespace-nowrap">
-              <PlusCircle className="mr-2 h-4 w-4" />
-              Share an Open Problem
-            </Link>
+            <Button asChild>
+              <Link to="/share-problem">
+                <PlusCircle className="mr-2 h-4 w-4" />
+                Share an Open Problem
+              </Link>
+            </Button>
           </div>
 
           {/* Search and Filters */}
@@ -106,13 +109,13 @@ const Problems = () => {
             </div>
             
             <div className="mt-4 flex justify-between items-center">
-              <button 
+              <Button 
                 onClick={() => setIsFiltersVisible(!isFiltersVisible)}
-                className="button-secondary"
+                variant="secondary"
               >
-                <Filter className="mr-2 h-4 w-4" />
+                <Filter className="h-4 w-4" />
                 Filter Problems
-              </button>
+              </Button>
               
               {(selectedCategories.length > 0 || selectedDifficulties.length > 0) && (
                 <button 
@@ -225,9 +228,9 @@ const Problems = () => {
                 </div>
                 <h3 className="text-lg font-medium mb-1">No problems found</h3>
                 <p className="text-muted-foreground mb-4">Try adjusting your search or filters</p>
-                <button onClick={clearFilters} className="button-secondary">
+                <Button onClick={clearFilters} variant="secondary">
                   Clear all filters
-                </button>
+                </Button>
               </div>
             )}
           </div>

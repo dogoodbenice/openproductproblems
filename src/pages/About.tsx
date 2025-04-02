@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
@@ -86,15 +86,21 @@ const About = () => {
                 We believe in the power of community learning. Share your solutions, learn from others, and contribute to making this platform even better.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/share-problem" className="button-primary">
-                  Submit a Problem
-                </Link>
-                <Link to="/contact" className="button-secondary">
-                  Contact Us
-                </Link>
-                <Link to="/sponsor" className="button-secondary">
-                  Sponsor the Project
-                </Link>
+                <Button asChild>
+                  <Link to="/share-problem">
+                    Submit a Problem
+                  </Link>
+                </Button>
+                <Button variant="secondary" asChild>
+                  <Link to="/contact">
+                    Contact Us
+                  </Link>
+                </Button>
+                <Button variant="secondary" asChild>
+                  <Link to="/sponsor">
+                    Sponsor the Project
+                  </Link>
+                </Button>
               </div>
             </div>
           </section>

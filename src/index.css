@@ -121,14 +121,6 @@
     @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700;
   }
   
-  .button-primary {
-    @apply inline-flex items-center px-4 py-2 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors;
-  }
-  
-  .button-secondary {
-    @apply inline-flex items-center px-4 py-2 rounded-md bg-secondary text-foreground hover:bg-secondary/90 transition-colors;
-  }
-  
   .tag {
     @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium bg-primary/10 text-primary;
   }
@@ -172,7 +164,7 @@
   }
 
   a {
-    @apply text-blue-600 hover:text-blue-800 font-medium;
+    @apply text-blue-600 font-medium;
   }
 
   /* Improve contrast for text */

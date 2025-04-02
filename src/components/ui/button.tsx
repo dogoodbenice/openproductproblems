@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:underline [&>a]:text-primary-foreground [&>a]:hover:text-primary-foreground [&>a]:no-underline [&>a]:font-normal [&>a]:w-full [&>a]:h-full [&>a]:flex [&>a]:items-center [&>a]:justify-center",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 hover:underline [&>a]:text-destructive-foreground [&>a]:hover:text-destructive-foreground [&>a]:no-underline [&>a]:font-normal [&>a]:w-full [&>a]:h-full [&>a]:flex [&>a]:items-center [&>a]:justify-center",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-accent hover:underline [&>a]:text-foreground [&>a]:hover:text-foreground [&>a]:no-underline [&>a]:font-normal [&>a]:w-full [&>a]:h-full [&>a]:flex [&>a]:items-center [&>a]:justify-center",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:underline [&>a]:text-secondary-foreground [&>a]:hover:text-secondary-foreground [&>a]:no-underline [&>a]:font-normal [&>a]:w-full [&>a]:h-full [&>a]:flex [&>a]:items-center [&>a]:justify-center",
+        ghost: "hover:bg-accent hover:underline [&>a]:text-foreground [&>a]:hover:text-foreground [&>a]:no-underline [&>a]:font-normal [&>a]:w-full [&>a]:h-full [&>a]:flex [&>a]:items-center [&>a]:justify-center",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
