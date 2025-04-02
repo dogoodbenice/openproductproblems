@@ -49,6 +49,49 @@ const Surprise = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">UI Elements Showcase</h1>
         
+        {/* HTML Tags */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold">HTML Tags</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <span className="tag">Default Tag</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag\""}</div>
+              </div>
+              <div className="space-y-2">
+                <span className="tag mb-4">Tag with Margin</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag mb-4\""}</div>
+              </div>
+              <div className="space-y-2">
+                <span className="tag text-primary">Primary Tag</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag text-primary\""}</div>
+              </div>
+              <div className="space-y-2">
+                <span className="tag bg-primary text-primary-foreground">Primary Background Tag</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag bg-primary text-primary-foreground\""}</div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <span className="tag text-secondary">Secondary Tag</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag text-secondary\""}</div>
+              </div>
+              <div className="space-y-2">
+                <span className="tag bg-secondary text-secondary-foreground">Secondary Background Tag</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag bg-secondary text-secondary-foreground\""}</div>
+              </div>
+              <div className="space-y-2">
+                <span className="tag text-destructive">Destructive Tag</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag text-destructive\""}</div>
+              </div>
+              <div className="space-y-2">
+                <span className="tag bg-destructive text-destructive-foreground">Destructive Background Tag</span>
+                <div className="text-xs text-muted-foreground">{"className=\"tag bg-destructive text-destructive-foreground\""}</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Buttons */}
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Buttons</h2>
