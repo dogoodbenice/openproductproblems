@@ -13,6 +13,7 @@ import Sponsor from "./pages/Sponsor";
 import ShareSolution from "./pages/ShareSolution";
 import ShareProblem from "./pages/ShareProblem";
 import Surprise from "./pages/Surprise";
+import Guestbook from "./pages/Guestbook";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/share-solution" element={<ShareSolution />} />
             <Route path="/share-problem" element={<ShareProblem />} />
             <Route path="/surprise" element={<Surprise />} />
+            <Route path="/guestbook" element={<Guestbook />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

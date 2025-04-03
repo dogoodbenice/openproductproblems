@@ -51,9 +51,16 @@ const Contact = () => {
                     Contact via Email
                   </Button>
                 </a>
-                <p className="mt-4 text-sm text-muted-foreground">
-                  Or email us directly at: <span className="font-medium text-foreground">{contactEmail}</span>
-                </p>
+                <div className="mt-6">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Want to send us some love? Leave a message in our guestbook! 💌
+                  </p>
+                  <Link to="/guestbook" className="inline-block w-full">
+                    <Button variant="secondary" className="w-full">
+                      Sign Our Guestbook
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </CardContent>
           </Card>

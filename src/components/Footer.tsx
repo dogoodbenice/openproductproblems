@@ -50,6 +50,7 @@ const Footer = () => {
             <Link to="/share-problem" className="text-sm text-muted-foreground hover:text-foreground">Contribute</Link>
             <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground">Contact</Link>
             <Link to="/sponsor" className="text-sm text-muted-foreground hover:text-foreground">Sponsor</Link>
+            <Link to="/guestbook" className="text-sm text-muted-foreground hover:text-foreground">Guestbook</Link>
           </div>
         </div>
         
