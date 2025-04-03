@@ -68,7 +68,7 @@ const About = () => {
                 Open Product Problems was created by <a href="https://www.surajr.com/">Suraj</a>, a product person interested in helping others. 
               </p>
               <p>He's always open to <a href="https://www.linkedin.com/in/surajrai/">connect</a> and <a href="https://www.surajr.com/contact">chat</a> about product, life and everything in between.</p>
-              <p>If you've found this useful please consider buying him a <a href="https://www.buymeacoffee.com/surajrai">coffee here</a>, or getting in touch about <a href="/sponsor">sponsorship</a>.</p>
+              <p>If you've found this useful please consider buying him a <a href="https://www.buymeacoffee.com/surajrai">coffee here</a>, or getting in touch about <Link to="/sponsor">sponsorship</Link>.</p>
             </div>
           </section>
 
