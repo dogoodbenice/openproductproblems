@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ChevronLeft, ChevronRight, BookOpen, Database, Link as LinkIcon, ExternalLink, MessageSquare, User, FileText, PlusCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, BookOpen, Database, Link as LinkIcon, ExternalLink, MessageSquare, User, FileText, PlusCircle, ChevronDown, ChevronUp, AlertTriangle } from 'lucide-react';
 import { problemsData, problemsDetails, getDifficultyColor } from '../data/problemsData';
 import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '../components/ui/table';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
@@ -140,6 +140,11 @@ const getFrameworkLink = (framework: string): string => {
   return links[framework] || "https://www.productplan.com/glossary/";
 };
 
+// List of problem IDs that should show the video context
+const VIDEO_PROBLEM_IDS = ['problem-1', 'problem-2', 'problem-3', 'problem-4'];
+// List of problem IDs that should show the video context in the approach section
+const APPROACH_VIDEO_PROBLEM_IDS = ['problem-2', 'problem-4']; // Example: adjust as needed
+
 const ProblemDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [isApproachExpanded, setIsApproachExpanded] = useState(false);
@@ -168,6 +173,10 @@ const ProblemDetail = () => {
   // Check if solutions exist for this problem
   const hasSolutions = problem.solutions && problem.solutions.length > 0;
   
+  // Example: placeholder video URL for approach section
+  const approachVideoUrl = "https://www.w3schools.com/html/mov_bbb.mp4";
+  const approachVideoPoster = "https://placehold.co/480x270?text=Approach+Video";
+
   return (
     <div className="min-h-screen bg-background pb-20 flex flex-col">
       {/* Header */}
@@ -211,6 +220,26 @@ const ProblemDetail = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Background</h2>
           <div className="glass-card rounded-xl p-6">
+            {/* Show video only for selected problems */}
+            {VIDEO_PROBLEM_IDS.includes(id) && (
+              <div className="mb-4 flex justify-center">
+                <div className="w-full max-w-md aspect-video bg-muted rounded-lg overflow-hidden flex items-center justify-center">
+                  <video
+                    controls
+                    poster="https://placehold.co/480x270?text=Video+Context"
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            )}
+            {VIDEO_PROBLEM_IDS.includes(id) && (
+              <div className="text-xs text-muted-foreground mt-2 text-center mb-2">
+                (Video context coming soon)
+              </div>
+            )}
             <p className="whitespace-pre-line">{problem.background}</p>
           </div>
         </section>
@@ -396,33 +425,58 @@ const ProblemDetail = () => {
         
         {/* Suggested Approach */}
         <section className="mb-12">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2">
-              <h2 className="text-2xl font-bold">Suggested Approach</h2>
-              <span className="text-sm text-muted-foreground">(Click to reveal →)</span>
-            </div>
-            <Button
+          <Card className="overflow-hidden">
+            <button
               onClick={() => setIsApproachExpanded(!isApproachExpanded)}
-              variant="secondary"
-              size="lg"
-              className="flex items-center gap-2"
+              className="w-full flex items-center justify-between px-6 py-4 bg-primary/10 hover:bg-primary/20 transition-colors cursor-pointer border-b"
+              aria-expanded={isApproachExpanded}
+              aria-controls="suggested-approach-panel"
+              type="button"
             >
+              <span className="flex items-center gap-2 text-lg font-semibold text-primary">
+                <FileText className="h-5 w-5" />
+                Suggested Approach
+                <span className="ml-3 flex items-center text-xs font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded">
+                  <AlertTriangle className="h-4 w-4 mr-1" />
+                  Spoiler: Click to reveal
+                </span>
+              </span>
               {isApproachExpanded ? (
-                <>
-                  Hide Approach
-                  <ChevronUp className="h-4 w-4" />
-                </>
+                <ChevronUp className="h-5 w-5 text-primary" />
               ) : (
-                <>
-                  Reveal Suggested Approach
-                  <ChevronDown className="h-4 w-4" />
-                </>
+                <ChevronDown className="h-5 w-5 text-primary" />
               )}
-            </Button>
-          </div>
-          <div className={`glass-card rounded-xl p-6 transition-all duration-300 ease-in-out ${isApproachExpanded ? 'opacity-100 max-h-[2000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
-            <p className="whitespace-pre-line">{problem.approach}</p>
-          </div>
+            </button>
+            <div
+              id="suggested-approach-panel"
+              className={`transition-all duration-300 ease-in-out ${
+                isApproachExpanded
+                  ? 'max-h-[900px] opacity-100 py-6 px-6'
+                  : 'max-h-0 opacity-0 py-0 px-6 overflow-hidden'
+              } bg-background`}
+              aria-hidden={!isApproachExpanded}
+            >
+              {/* Optional video inside approach */}
+              {APPROACH_VIDEO_PROBLEM_IDS.includes(id) && (
+                <div className="mb-4 flex justify-center">
+                  <div className="w-full max-w-md aspect-video bg-muted rounded-lg overflow-hidden flex items-center justify-center">
+                    <video
+                      controls
+                      poster={approachVideoPoster}
+                      className="w-full h-full object-cover"
+                    >
+                      <source src={approachVideoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-2 text-center mb-2 w-full">
+                    (Video explanation coming soon)
+                  </div>
+                </div>
+              )}
+              <p className="whitespace-pre-line text-base text-muted-foreground">{problem.approach}</p>
+            </div>
+          </Card>
         </section>
         
         {/* Contribute section - after Suggested Approach */}
@@ -459,27 +513,35 @@ const ProblemDetail = () => {
         {/* Navigation */}
         <div className="mt-16 border-t pt-8 flex justify-between">
           {prevProblem ? (
-            <Link to={`/problem/${prevProblem.id}`} className="button-secondary">
-              <ChevronLeft className="mr-2 h-4 w-4" />
-              Previous Problem
-            </Link>
+            <Button asChild variant="secondary">
+              <Link to={`/problem/${prevProblem.id}`}>
+                <ChevronLeft className="mr-2 h-4 w-4" />
+                Previous Problem
+              </Link>
+            </Button>
           ) : (
-            <Link to="/problems" className="button-secondary">
-              <ChevronLeft className="mr-2 h-4 w-4" />
-              All Problems
-            </Link>
+            <Button asChild variant="secondary">
+              <Link to="/problems">
+                <ChevronLeft className="mr-2 h-4 w-4" />
+                All Problems
+              </Link>
+            </Button>
           )}
-          
+
           {nextProblem ? (
-            <Link to={`/problem/${nextProblem.id}`} className="button-primary">
-              Next Problem
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Link>
+            <Button asChild variant="primary">
+              <Link to={`/problem/${nextProblem.id}`}>
+                Next Problem
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           ) : (
-            <Link to="/problems" className="button-primary">
-              All Problems
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Link>
+            <Button asChild variant="primary">
+              <Link to="/problems">
+                All Problems
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           )}
         </div>
       </main>

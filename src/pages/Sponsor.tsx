@@ -18,7 +18,8 @@ const individualBenefits = [
   "Help us develop new content and features",
   "Enable more comprehensive learning resources",
   "Be acknowledged on our sponsors page",
-  "Help make product skills more accessible to all"
+  "Help make product skills more accessible to all",
+  "Access optional 1-1 coaching sessions with experienced product mentors"
 ];
 
 const Sponsor = () => {
