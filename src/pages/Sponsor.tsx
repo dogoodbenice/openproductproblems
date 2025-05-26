@@ -1,9 +1,25 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+
+const companyBenefits = [
+  "Access to talented product thinkers in our community",
+  "Brand visibility to product professionals",
+  "Opportunity to shape the future of product education",
+  "Demonstrate commitment to product excellence",
+  "Connect with a growing network of product managers",
+  "For £100, we'll run and facilitate a session at your company"
+];
+
+const individualBenefits = [
+  "Support a free educational resource for the PM community",
+  "Help us develop new content and features",
+  "Enable more comprehensive learning resources",
+  "Be acknowledged on our sponsors page",
+  "Help make product skills more accessible to all"
+];
 
 const Sponsor = () => {
   return (
@@ -38,13 +54,7 @@ const Sponsor = () => {
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-bold mb-4">For Companies</h3>
                   <ul className="space-y-3">
-                    {[
-                      "Access to talented product thinkers in our community",
-                      "Brand visibility to product professionals",
-                      "Opportunity to shape the future of product education",
-                      "Demonstrate commitment to product excellence",
-                      "Connect with a growing network of product managers"
-                    ].map((benefit, index) => (
+                    {companyBenefits.map((benefit, index) => (
                       <li key={index} className="flex">
                         <CheckCircle className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
                         <span>{benefit}</span>
@@ -58,13 +68,7 @@ const Sponsor = () => {
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-bold mb-4">For Individuals</h3>
                   <ul className="space-y-3">
-                    {[
-                      "Support a free educational resource for the PM community",
-                      "Help us develop new content and features",
-                      "Enable more comprehensive learning resources",
-                      "Be acknowledged on our sponsors page",
-                      "Help make product skills more accessible to all"
-                    ].map((benefit, index) => (
+                    {individualBenefits.map((benefit, index) => (
                       <li key={index} className="flex">
                         <CheckCircle className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
                         <span>{benefit}</span>
@@ -79,12 +83,17 @@ const Sponsor = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6 text-center">Sponsorship Opportunities</h2>
             <div className="glass-card rounded-xl p-6">
-              <p className="mb-6">
-                We offer various sponsorship levels and opportunities that can be tailored to your organization's goals and budget. Whether you're interested in content sponsorship, platform enhancements, or community events, we'd love to discuss how we can collaborate.
-              </p>
-              <p className="mb-8">
-                Our sponsors help us keep this resource free and accessible to everyone while continually improving the platform with new problems, frameworks, and learning resources.
-              </p>
+              <ul className="mb-6 list-disc list-inside text-left space-y-2">
+                <li>
+                  We offer various sponsorship levels and opportunities that can be tailored to your organization's goals and budget. Whether you're interested in content sponsorship, platform enhancements, or community events, we'd love to discuss how we can collaborate.
+                </li>
+                <li>
+                  Our sponsors help us keep this resource free and accessible to everyone while continually improving the platform with new problems, frameworks, and learning resources.
+                </li>
+                <li>
+                  <strong>Sponsor the project on GitHub</strong> and we'll add a specific challenge from your company, displaying and linking to your logo.
+                </li>
+              </ul>
               <div className="text-center">
                 <Link to="/contact">
                   <Button size="lg">
